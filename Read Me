@@ -1,0 +1,58 @@
+Instruction to run test cases
+    - install robot framework dependencies
+    - clone repo
+    - change directory to the UserStories*.robot files
+
+ To run all user stories test case
+    - run robot .\UserStories*.robot
+To run single user stories test case suite
+    - run robot .\UserStories{number}.robot
+
+
+
+
+Below is a summary of the Bugs found in this web service in regards to the log.html
+
+User Stories 1
+- API:  /calculator/insert -
+    - Even when hero is missing gender parameter it is successful entry
+    - Name parameter should not allow digit in names
+    - Gender should not be allowed to be digits, special characters and should not be string
+    - Gender also allow other char apart from m and f
+    - Birthday's year is allowed to be place in the future
+    - Birthday's year can also be place after quite low even higher than 150 years old
+    - Salary is allowed to be negative float and integer
+    - Salary is allowed to be in characters and special characters
+    - Salary is allow to be placed as 0
+    - Tax is allowed to be negative float and integer
+    - Tax is allowed to be in characters and special characters
+    - Tax is allow to be bigger than Salary
+
+User Stories 2
+-API: /calculator/insertMultiple
+    - Even when hero is missing gender parameter it is successful entry
+    - Name parameter should not allow digit in names
+    - Gender should not be allowed to be digits, special characters and should not be string
+    - Gender also allow other char apart from m and f
+    - Birthday's year is allowed to be place in the future
+    - Birthday's year can also be place after quite low even higher than 150 years old
+    - Salary is allowed to be negative float and integer
+    - Salary is allowed to be in characters and special characters
+    - Salary is allow to be placed as 0
+    - Tax is allowed to be negative float and integer
+    - Tax is allowed to be in characters and special characters
+    - Tax is allow to be bigger than Salary
+
+User Stories 3
+- API: /calculator/uploadLargeFileForInsertionToDatabase
+    - API does not load valid csv file though API and UI
+    - API does not able to map the parameter natid, name, gender, salary,birthday, tax from the csv file to model
+
+User Stories 4
+- API: /calculator/taxRelief
+    - Rounding up feature is not working as it will not round up to remove any decimal places
+    - When Tax relief is 0.00 the API change it to 25.00
+
+User Stories 5
+- UI
+    - Button works, but it only display Cash dispensed but does not follow up with any backend API
